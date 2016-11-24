@@ -1,1 +1,4 @@
-BakerySchema = GraphQL::Schema.new(query: QueryType)
+BakerySchema = GraphQL::Schema.define(
+  query: QueryType,
+  mutation: MutationType
+)

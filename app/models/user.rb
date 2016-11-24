@@ -4,12 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  ## Token Authenticatable
+  acts_as_token_authenticatable
+
   has_many :bakery
-
-  after_create :update_access_token!
-
-  def update_access_token!
-    access_token = "#{self.id}:#{Devise.friendly_token}"
-    save!
-  end
 end

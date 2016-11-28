@@ -24,7 +24,7 @@
 #   end
 # end
 
-module BakeryMutations
+module BakeryMutation
   Create = GraphQL::Relay::Mutation.define do
     name "CreateBakeryMutation"
     description "Create bakery and return new bakery"

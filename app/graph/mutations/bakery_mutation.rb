@@ -34,10 +34,10 @@ module BakeryMutation
     return_field :bakery, BakeryType
 
     resolve ->(object, inputs, ctx) {
-       bakery = Bakery.new(:name => inputs[:name])
+       bakery = Bakery.create!(:name => inputs[:name])
       #  bakery.account = Account.first
       #  bakery.user = User.first
-       bakery.save
+       #bakery.save
        return {
          bakery: bakery
        }

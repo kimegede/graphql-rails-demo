@@ -51,7 +51,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubis (2.7.0)
-    ffi (1.9.23)
+    ffi (1.11.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     graphiql-rails (1.4.10)
